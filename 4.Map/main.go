@@ -37,6 +37,14 @@ func main() {
 	delete(statusCodes, 500)
 	fmt.Println("There is a total of ", len(statusCodes), " status codes with messages after deleting")
 
+	// Checking if a value exist in a map
+	v, ok := statusCodes[666]
+	if !ok {
+		fmt.Println("Deuzulivre")
+	} else {
+		fmt.Println("The number of the beast: ", v)
+	}
+
 	fmt.Println("Remaining statuscodes:")
 	// When you loop through a map, you get `k`  and `v`
 	for k, v := range statusCodes {
